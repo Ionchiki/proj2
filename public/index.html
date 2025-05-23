@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="auth-container" class="container">
+        <h2>Login</h2>
+        <form id="auth-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="#" id="toggle-auth">Register</a></p>
+        </form>
+    </div>
+
+    <div id="main-container" class="container hidden">
+        <nav>
+            <button id="postgres-btn" class="active">PostgreSQL</button>
+            <button id="mongodb-btn">MongoDB</button>
+            <button id="logout-btn">Logout</button>
+        </nav>
+
+        <div id="database-panel">
+            <div id="structure-panel">
+                <h3>Структура базы данных</h3>
+                <div id="structure-content"></div>
+            </div>
+
+            <div id="query-panel">
+                <h3>Введите запрос</h3>
+                <textarea id="query-input" placeholder="Enter your query here..."></textarea>
+                <button id="execute-btn">Выполнить</button>
+                <div id="result-panel">
+                    <h3>Результат</h3>
+                    <div id="query-results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
